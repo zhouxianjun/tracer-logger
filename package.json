@@ -1,0 +1,19 @@
+{
+  "name": "tracer-logger",
+  "version": "1.0.0",
+  "description": "tracer logger config",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "tracer",
+    "logger"
+  ],
+  "author": "Alone",
+  "license": "ISC",
+  "dependencies": {
+    "merge": "^1.2.0",
+    "tracer": "^0.8.7"
+  }
+}
