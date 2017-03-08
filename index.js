@@ -23,10 +23,10 @@ const findLog = (parent) => {
     }
     return obj;
 };
-const config = findLog(process.cwd());
+const config = findLog(process.cwd()) || findLog(__dirname);
 console.info(`tracer logger config: ${util.inspect(config)}`);
 if (config.root) {
-    let root = path.resolve(__dirname, config.root);
+    let root = path.resolve(process.cwd(), config.root);
     if (!fs.existsSync(root)) {
         fs.mkdirSync(root);
         console.info(`tracer logger mkdir ${root}`);
