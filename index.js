@@ -2,7 +2,6 @@
  * Created by Alone on 2017/3/8.
  */
 'use strict';
-const merge = require('merge');
 const tracer = require('tracer');
 const path = require('path');
 const fs = require("fs");
