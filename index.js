@@ -23,7 +23,7 @@ const findLog = (parent) => {
     return obj;
 };
 const config = findLog(process.cwd()) || findLog(__dirname);
-console.info(`tracer logger config: ${util.inspect(config)}`);
+console.info(`tracer logger config: \n${util.inspect(config)}`);
 if (config.root) {
     let root = path.resolve(process.cwd(), config.root);
     if (!fs.existsSync(root)) {
@@ -32,4 +32,5 @@ if (config.root) {
     }
 }
 
-module.exports = tracer.dailyfile(config);
+const logger = tracer.dailyfile(config);
+module.exports = logger;
